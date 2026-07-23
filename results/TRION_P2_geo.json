@@ -1,0 +1,24 @@
+{
+  "label": "TRION_P2_geo",
+  "cloud": "../results/_prep/TRION_P2_geo.las",
+  "n_points": 1850711,
+  "bbox_m": [
+    13.71,
+    14.45,
+    4.27
+  ],
+  "density_radius_m": 0.05,
+  "density_median_pts_m2": 7002.8,
+  "density_mean_pts_m2": 12124.0,
+  "spacing_mm": 11.95,
+  "density_class": "Low (LOA10)",
+  "roughness_kernel_m": 0.03,
+  "roughness_median_mm": 3.6,
+  "roughness_p90_mm": 9.5,
+  "sigma_planar_mm": 5.63,
+  "noise_class": "Medium (LOA20)",
+  "noise_method": "auto (dominant wall, local patch)",
+  "measured_on_wall": true,
+  "acq_duration_min": 0.675,
+  "acq_s_per_m2": null
+}

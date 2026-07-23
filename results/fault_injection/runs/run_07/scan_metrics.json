@@ -1,0 +1,24 @@
+{
+  "label": "unit",
+  "cloud": "data/input_cloud.e57",
+  "n_points": 22361963,
+  "bbox_m": [
+    9.464,
+    3.029,
+    10.622
+  ],
+  "density_radius_m": 0.05,
+  "density_median_pts_m2": 48457.146,
+  "density_mean_pts_m2": 88725.157,
+  "spacing_mm": 4.54,
+  "density_class": "High (LOA30)",
+  "roughness_kernel_m": 0.03,
+  "roughness_median_mm": 6.603,
+  "roughness_p90_mm": 12.671,
+  "sigma_planar_mm": 8.157,
+  "noise_class": "Medium (LOA20)",
+  "noise_method": "auto (dominant wall, local patch)",
+  "measured_on_wall": true,
+  "acq_duration_min": null,
+  "acq_s_per_m2": null
+}

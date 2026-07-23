@@ -1,0 +1,15 @@
+{
+  "run_id": "run_06",
+  "prompt": "PROMPT.md",
+  "prompt_version": "1.0",
+  "files_to_examine": [
+    "scan_metrics.json",
+    "deviation_metrics.json",
+    "pipeline.log"
+  ],
+  "repetitions": [
+    "rep_01",
+    "rep_02"
+  ],
+  "verdict_filename": "verdict.json"
+}

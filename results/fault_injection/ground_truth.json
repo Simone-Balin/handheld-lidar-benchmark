@@ -1,0 +1,105 @@
+{
+  "meta": {
+    "created": "2026-07-09T09:11:50",
+    "protocol": "fixed prompts, independent fresh-context repetitions",
+    "prompt_version": "1.0",
+    "seed": 42,
+    "n_clean": 5,
+    "n_faulted": 5,
+    "reps": 2,
+    "artefact_source": {
+      "source_dir": "results",
+      "scan_artefacts": "real (5 found)",
+      "deviation_artefacts": "real (2 found)",
+      "log_artefacts": "real (5 found)"
+    }
+  },
+  "runs": {
+    "run_01": {
+      "faulted": true,
+      "fault_type": "registration_degraded",
+      "details": {
+        "file": "deviation_metrics.json",
+        "p95_before_mm": 359.933,
+        "p95_after_mm": 762.71,
+        "fitness_before": 0.707,
+        "fitness_after": 0.223,
+        "note": "low ICP fitness also mirrored in pipeline.log"
+      }
+    },
+    "run_02": {
+      "faulted": true,
+      "fault_type": "corrupted_log",
+      "details": {
+        "file": "pipeline.log",
+        "variant": "error_injected",
+        "after_line": 24,
+        "lines": [
+          "[09:01:11] [ERROR] Failed to load file 'data/input_cloud.e57'",
+          "[09:01:11] An error occurred during this process! Result may be incomplete!"
+        ]
+      }
+    },
+    "run_03": {
+      "faulted": false,
+      "fault_type": "none",
+      "details": {}
+    },
+    "run_04": {
+      "faulted": true,
+      "fault_type": "synthetic_outlier",
+      "details": {
+        "file": "scan_metrics.json",
+        "variant": "density_x100",
+        "metric": "density_median_pts_m2",
+        "original": 118016.794,
+        "injected": 11801679.4
+      }
+    },
+    "run_05": {
+      "faulted": false,
+      "fault_type": "none",
+      "details": {}
+    },
+    "run_06": {
+      "faulted": false,
+      "fault_type": "none",
+      "details": {}
+    },
+    "run_07": {
+      "faulted": false,
+      "fault_type": "none",
+      "details": {}
+    },
+    "run_08": {
+      "faulted": true,
+      "fault_type": "corrupted_log",
+      "details": {
+        "file": "pipeline.log",
+        "variant": "error_injected",
+        "after_line": 31,
+        "lines": [
+          "[18:04:14] [ERROR] Failed to load file 'data/input_cloud.e57'",
+          "[18:04:14] An error occurred during this process! Result may be incomplete!"
+        ]
+      }
+    },
+    "run_09": {
+      "faulted": false,
+      "fault_type": "none",
+      "details": {}
+    },
+    "run_10": {
+      "faulted": true,
+      "fault_type": "registration_degraded",
+      "details": {
+        "file": "deviation_metrics.json",
+        "p95_before_mm": 14.93,
+        "p95_after_mm": 680.78,
+        "fitness_before": 0.917,
+        "fitness_after": 0.202,
+        "note": "low ICP fitness also mirrored in pipeline.log"
+      }
+    }
+  }
+}

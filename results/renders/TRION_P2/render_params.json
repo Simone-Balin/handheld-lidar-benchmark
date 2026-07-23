@@ -1,0 +1,122 @@
+{
+  "tool": "render_std.py",
+  "generated_utc": "2026-07-22T14:15:55+00:00",
+  "input": {
+    "cloud": "../results/_prep/TRION_P2.las",
+    "label": "TRION_P2",
+    "format": "las",
+    "n_points_file": 606414
+  },
+  "coordinate_anchor_subtracted": [
+    -6.3588,
+    -7.9358,
+    -0.2802
+  ],
+  "subsampling": {
+    "applied": false,
+    "max_points": 8000000,
+    "seed": 0,
+    "method": "uniform random without replacement (display only)",
+    "n_points_rendered": 606414
+  },
+  "image": {
+    "image_width_px": 1600,
+    "image_height_px": 1200,
+    "margin_px": 40,
+    "background_rgb": [
+      255,
+      255,
+      255
+    ],
+    "point_size_px": 1,
+    "depth_test": "z-buffer, point nearest to the observer wins"
+  },
+  "colormap": {
+    "style": "viridis-like, hand-coded (no matplotlib)",
+    "n_anchors": 32,
+    "lut_size": 256,
+    "z_range_percentiles": [
+      2.0,
+      98.0
+    ],
+    "z_range_m_absolute": [
+      -0.2366,
+      2.1664
+    ]
+  },
+  "floor": {
+    "percentile": 2.0,
+    "elevation_m_absolute": -0.2366
+  },
+  "section_120": {
+    "band_above_floor_m": [
+      1.15,
+      1.25
+    ],
+    "z_min_m_absolute": 0.9134,
+    "z_max_m_absolute": 1.0134,
+    "n_points": 15443
+  },
+  "iso_view": {
+    "azimuth_deg": 45.0,
+    "elevation_deg": 35.264
+  },
+  "percentiles_computed_on": "full cloud",
+  "views": {
+    "plan": {
+      "n_points": 606414,
+      "n_pixels_hit": 146162,
+      "px_per_m": 82.5204,
+      "mm_per_px": 12.118,
+      "extent_m": [
+        11.688,
+        13.572
+      ],
+      "file": "plan.png"
+    },
+    "elev_x": {
+      "n_points": 606414,
+      "n_pixels_hit": 119245,
+      "px_per_m": 111.992,
+      "mm_per_px": 8.929,
+      "extent_m": [
+        13.572,
+        2.593
+      ],
+      "file": "elev_x.png"
+    },
+    "elev_y": {
+      "n_points": 606414,
+      "n_pixels_hit": 136755,
+      "px_per_m": 130.049,
+      "mm_per_px": 7.689,
+      "extent_m": [
+        11.688,
+        2.593
+      ],
+      "file": "elev_y.png"
+    },
+    "iso": {
+      "n_points": 606414,
+      "n_pixels_hit": 284588,
+      "px_per_m": 113.3638,
+      "mm_per_px": 8.821,
+      "extent_m": [
+        13.408,
+        8.173
+      ],
+      "file": "iso.png"
+    },
+    "section_120": {
+      "n_points": 15443,
+      "n_pixels_hit": 3659,
+      "px_per_m": 82.6269,
+      "mm_per_px": 12.103,
+      "extent_m": [
+        7.776,
+        13.555
+      ],
+      "file": "section_120.png"
+    }
+  }
+}

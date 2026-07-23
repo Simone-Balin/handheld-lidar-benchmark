@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.85
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.6
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Walls/roof read as thin single surfaces in section and elevations; corners sharp, no bending or doubling. Minor scattered outlier points beyond plan footprint and a few small gaps in the section trace. No wall duplication or ghosting observed."
+}

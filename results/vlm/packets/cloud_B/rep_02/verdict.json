@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.5
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Perimeter reads as straight, crisp right angles in plan/elevations/section; no bowing, doubled surfaces or duplicated walls. Rectangular gaps in elevations look like genuine door/window openings. Fine vertical/radial streaking on walls and floor suggests mild scatter, but section trace stays thin."
+}

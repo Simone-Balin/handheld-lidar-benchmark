@@ -1,0 +1,37 @@
+{
+  "params": {
+    "density_radius_m": 0.05,
+    "roughness_kernel_m": 0.03,
+    "ransac_inlier_m": 0.015,
+    "m3c2_normal_scale": 0.30,
+    "m3c2_proj_scale": 0.20,
+    "m3c2_subsample": 0.05,
+    "m3c2_outlier_sigma": 3.0
+  },
+  "reference": {
+    "label": "RTC360",
+    "cloud": "../results/_prep/RTC360.las",
+    "notes": "Leica RTC360, single setup 50, Oct 2024"
+  },
+  "scanners": [
+    {
+      "label": "BLK2GO",
+      "cloud": "../results/_prep/BLK2GO.las",
+      "price_eur": 30000,
+      "acq_min": null
+    },
+    {
+      "label": "IPHONE17",
+      "cloud": "../results/_prep/IPHONE17.las",
+      "price_eur": 1200,
+      "acq_min": 1.0,
+      "notes": "iPhone 17 Pro + SiteScape (FARO); acquisition 60 s"
+    },
+    {
+      "label": "TRION_P2",
+      "cloud": "../results/_prep/TRION_P2.las",
+      "price_eur": 8500,
+      "notes": "FJD Trion P2, native LAS export (Papaer01, 2026-07-22 09:09:58); far-field returns beyond 8 m from the trajectory removed (0.13% of points); acquisition 61 s over a 20.7 m walked path, from LAS GPS-time and vendor app"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "scan_metrics.json gives spacing_mm=2.91 and 23,665,883 points over a 6.735x9.073x2.603 m bbox, both implying a density on the order of ~1.2e5 pts/m2, yet density_median_pts_m2=11,801,679.4 and density_mean_pts_m2=18,462,311.5 are about 100x higher, an internal order-of-magnitude contradiction within the same run's metrics."
+}

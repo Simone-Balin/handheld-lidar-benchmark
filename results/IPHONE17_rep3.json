@@ -1,0 +1,24 @@
+{
+  "label": "IPHONE17_rep3",
+  "cloud": "../../_SCANSIONI/_APP IPHONE 17 PRO/_others/Scan at 18.15.ply",
+  "n_points": 23973001,
+  "bbox_m": [
+    6.2,
+    2.92,
+    6.27
+  ],
+  "density_radius_m": 0.05,
+  "density_median_pts_m2": 98294.1,
+  "density_mean_pts_m2": 131655.4,
+  "spacing_mm": 3.19,
+  "density_class": "High (LOA30)",
+  "roughness_kernel_m": 0.03,
+  "roughness_median_mm": 5.7,
+  "roughness_p90_mm": 14.0,
+  "sigma_planar_mm": 7.4,
+  "noise_class": "Medium (LOA20)",
+  "noise_method": "auto (dominant wall, local patch)",
+  "measured_on_wall": true,
+  "acq_duration_min": null,
+  "acq_s_per_m2": null
+}

@@ -1,0 +1,24 @@
+{
+  "label": "BLK2GO",
+  "cloud": "C:\\Users\\SIC\\Desktop\\ClaudeWorkspace\\01_POLIMI_RESEARCH\\3_ricerca\\2026\\lc3d_2026\\_NEW UPLOAD 07-26\\lidar-scanner-benchmark\\..\\results\\_prep\\BLK2GO.las",
+  "n_points": 1575579,
+  "bbox_m": [
+    5.58,
+    5.79,
+    2.45
+  ],
+  "density_radius_m": 0.05,
+  "density_median_pts_m2": 16042.8,
+  "density_mean_pts_m2": 19993.6,
+  "spacing_mm": 7.9,
+  "density_class": "Medium (LOA20)",
+  "roughness_kernel_m": 0.03,
+  "roughness_median_mm": 2.4,
+  "roughness_p90_mm": 7.5,
+  "sigma_planar_mm": 6.3,
+  "noise_class": "Medium (LOA20)",
+  "noise_method": "auto (dominant wall, local patch)",
+  "measured_on_wall": true,
+  "acq_duration_min": null,
+  "acq_s_per_m2": null
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "The ICP alignment converged with fitness=0.653 and inlier RMSE=43.694 mm (pipeline.log: 'Converged: fitness=0.653, inlier RMSE=0.043694 m'), roughly 15-100x larger than this scan's own spacing (2.44 mm) and median roughness (0.296 mm), showing the two clouds were not properly aligned. Consequently the M3C2 deviation stats are huge and mostly noise from misregistration (deviation_std_mm=140.239, deviation_p95abs_mm=348.262, within_5mm_pct=19.4%, within_50mm_pct=79.3%) and are explicitly classified 'Insufficient', so the deviation metrics for this run are not meaningful."
+}

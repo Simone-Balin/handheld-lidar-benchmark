@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.223 with inlier RMSE 165.84 mm, and the M3C2 deviation collapses (p95abs 762.71 mm, std 154.566 mm) with only 46.3% valid points and within-tolerance percentages of 1.4%/2.9%/8.2%, all classed 'Insufficient', while scan_metrics.json and pipeline.log show no acquisition or logging problems."
+}

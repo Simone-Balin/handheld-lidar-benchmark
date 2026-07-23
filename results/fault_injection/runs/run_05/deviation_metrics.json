@@ -1,0 +1,16 @@
+{
+  "label": "unit",
+  "reference": "data/reference_cloud.e57",
+  "target": "data/target_cloud.e57",
+  "registration_fitness": 1.006,
+  "registration_rmse_mm": 27.523,
+  "m3c2_valid_pct": 100.0,
+  "registration_ok": true,
+  "deviation_mean_mm": 1.764,
+  "deviation_std_mm": 16.757,
+  "deviation_p95abs_mm": 13.888,
+  "deviation_class": "Medium (LOA20)",
+  "within_5mm_pct": 59.9,
+  "within_15mm_pct": 90.1,
+  "within_50mm_pct": 100.0
+}

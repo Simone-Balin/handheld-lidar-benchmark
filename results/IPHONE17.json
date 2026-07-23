@@ -1,0 +1,24 @@
+{
+ "label": "IPHONE17",
+ "cloud": "C:\\Users\\SIC\\Desktop\\ClaudeWorkspace\\01_POLIMI_RESEARCH\\3_ricerca\\2026\\lc3d_2026\\_NEW UPLOAD 07-26\\lidar-scanner-benchmark\\..\\results\\_prep\\IPHONE17.las",
+ "n_points": 23983226,
+ "bbox_m": [
+  6.31,
+  9.05,
+  2.57
+ ],
+ "density_radius_m": 0.05,
+ "density_median_pts_m2": 121212.4,
+ "density_mean_pts_m2": 185095.3,
+ "spacing_mm": 2.87,
+ "density_class": "High (LOA30)",
+ "roughness_kernel_m": 0.03,
+ "roughness_median_mm": 6.7,
+ "roughness_p90_mm": 15.7,
+ "sigma_planar_mm": 7.97,
+ "noise_class": "Medium (LOA20)",
+ "noise_method": "auto (dominant wall, local patch)",
+ "measured_on_wall": true,
+ "acq_duration_min": 1.0,
+ "acq_s_per_m2": null
+}

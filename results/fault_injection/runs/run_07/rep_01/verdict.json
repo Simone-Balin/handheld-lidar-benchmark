@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.709 with inlier RMSE of 39.088 mm, far above the scan's own noise floor (sigma_planar_mm=8.157, roughness_median_mm=6.603), and the resulting M3C2 deviation (std=153.419 mm, p95abs=398.044 mm, within_5mm_pct only 19.3%, deviation_class=\"Insufficient\") is one to two orders of magnitude larger than plausible surface differences, indicating the co-registration itself is unreliable rather than reflecting real scan quality."
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "All figures cross-check consistently (spacing_mm=2.97 matches 1/sqrt(density_median_pts_m2=113038.215); pipeline.log ICP line 'fitness=0.981, inlier RMSE=0.024503 m' matches registration_fitness/registration_rmse_mm exactly) and the log runs cleanly from load to save with no errors; deviation figures (mean 1.42mm, p95abs 14.524mm, within_15mm_pct 95.0%) are mutually coherent and only mediocre, not collapsed, so no registration_degraded, corrupted_log, or synthetic_outlier fault is evident."
+}

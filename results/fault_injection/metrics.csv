@@ -1,0 +1,11 @@
+run_id,faulted,fault_type,n_reps_expected,n_verdicts,detected_votes,majority_detected,majority_fault_type,detection_correct_rate,type_correct_rate,consistency
+run_01,True,registration_degraded,2,2,2,True,registration_degraded,1.0,1.0,1.0
+run_02,True,corrupted_log,2,2,2,True,corrupted_log,1.0,1.0,1.0
+run_03,False,none,2,2,1,False,none,0.5,,0.5
+run_04,True,synthetic_outlier,2,2,1,False,none,0.5,1.0,0.5
+run_05,False,none,2,2,2,True,synthetic_outlier,0.0,,1.0
+run_06,False,none,2,2,1,False,none,0.5,,0.5
+run_07,False,none,2,2,2,True,registration_degraded,0.0,,1.0
+run_08,True,corrupted_log,2,2,2,True,corrupted_log,1.0,0.5,0.5
+run_09,False,none,2,2,2,True,registration_degraded,0.0,,1.0
+run_10,True,registration_degraded,2,2,2,True,registration_degraded,1.0,1.0,1.0

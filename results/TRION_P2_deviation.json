@@ -1,0 +1,16 @@
+{
+  "label": "TRION_P2",
+  "reference": "../results/_prep/RTC360.las",
+  "target": "../results/_prep/TRION_P2.las",
+  "registration_fitness": 0.592,
+  "registration_rmse_mm": 24.26,
+  "m3c2_valid_pct": 100.0,
+  "registration_ok": true,
+  "deviation_mean_mm": -0.52,
+  "deviation_std_mm": 11.029,
+  "deviation_p95abs_mm": 13.72,
+  "deviation_class": "Medium (LOA20)",
+  "within_5mm_pct": 75.6,
+  "within_15mm_pct": 95.4,
+  "within_50mm_pct": 98.7
+}

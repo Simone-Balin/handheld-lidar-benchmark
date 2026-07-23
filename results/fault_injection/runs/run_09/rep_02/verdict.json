@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "pipeline.log reports ICP convergence at fitness=0.653 with inlier RMSE=0.043694 m (43.7 mm), an order of magnitude above the scan's own roughness (median 0.296 mm, p90 1.308 mm); this propagates into deviation_metrics.json as deviation_p95abs_mm=348.262, within_5mm_pct only 19.4 and within_50mm_pct only 79.3, with deviation_class explicitly 'Insufficient', showing the co-registration itself is unreliable rather than a genuine surface deviation."
+}

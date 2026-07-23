@@ -1,0 +1,13 @@
+{
+  "params": {
+    "density_radius_m": 0.05,
+    "roughness_kernel_m": 0.03,
+    "ransac_inlier_m": 0.015
+  },
+  "scanners": [
+    { "label": "BLK2GO",       "cloud": "data/blk2go.las",  "wall": "data/blk2go_wall.bin" },
+    { "label": "FJD_Trion",    "cloud": "data/fjd.las",     "wall": "data/fjd_wall.bin" },
+    { "label": "Raven",        "cloud": "data/raven.las",   "wall": "data/raven_wall.bin" },
+    { "label": "Scanner4",     "cloud": "data/scanner4.las","wall": "data/scanner4_wall.bin" }
+  ]
+}

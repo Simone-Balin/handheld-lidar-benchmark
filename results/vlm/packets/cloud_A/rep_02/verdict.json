@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "artifacts": {
+    "drift": {
+      "severity": 1,
+      "confidence": 0.5
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "excess_noise": {
+      "severity": 2,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Walls/corners read as single, straight surfaces in elevations and section; no doubling. Plan shows radial banding and scattered speckle noise over the roof surface; iso has a streaky noisy patch. Gaps align with doors/windows, not counted as holes. Minor roofline waviness noted."
+}

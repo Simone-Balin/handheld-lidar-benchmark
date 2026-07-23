@@ -1,0 +1,24 @@
+{
+  "label": "TRION_P2",
+  "cloud": "../results/_prep/TRION_P2.las",
+  "n_points": 606414,
+  "bbox_m": [
+    11.69,
+    13.56,
+    2.54
+  ],
+  "density_radius_m": 0.05,
+  "density_median_pts_m2": 3692.4,
+  "density_mean_pts_m2": 4643.0,
+  "spacing_mm": 16.46,
+  "density_class": "Low (LOA10)",
+  "roughness_kernel_m": 0.03,
+  "roughness_median_mm": 0.7,
+  "roughness_p90_mm": 2.7,
+  "sigma_planar_mm": 3.55,
+  "noise_class": "High (LOA30)",
+  "noise_method": "auto (dominant wall, local patch)",
+  "measured_on_wall": true,
+  "acq_duration_min": 1.0,
+  "acq_s_per_m2": null
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "deviation_metrics.json values match pipeline.log exactly (fitness=0.748 and inlier RMSE=0.036155 m at 18:04:10; valid=98.3% at 18:04:52), and within-tolerance percentages rise smoothly (17.5% / 50.9% / 90.2% within 5/15/50 mm) rather than collapsing, consistent with a genuine but mediocre BLK2GO handheld-scanner alignment, not a registration failure; the log runs to completion with no truncation or error messages."
+}

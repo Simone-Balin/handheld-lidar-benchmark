@@ -1,0 +1,16 @@
+{
+  "label": "BLK2GO",
+  "reference": "C:\\Users\\SIC\\Desktop\\ClaudeWorkspace\\01_POLIMI_RESEARCH\\3_ricerca\\2026\\lc3d_2026\\_NEW UPLOAD 07-26\\lidar-scanner-benchmark\\..\\results\\_prep\\RTC360.las",
+  "target": "C:\\Users\\SIC\\Desktop\\ClaudeWorkspace\\01_POLIMI_RESEARCH\\3_ricerca\\2026\\lc3d_2026\\_NEW UPLOAD 07-26\\lidar-scanner-benchmark\\..\\results\\_prep\\BLK2GO.las",
+  "registration_fitness": 0.978,
+  "registration_rmse_mm": 26.51,
+  "m3c2_valid_pct": 99.4,
+  "registration_ok": true,
+  "deviation_mean_mm": 1.556,
+  "deviation_std_mm": 15.513,
+  "deviation_p95abs_mm": 14.95,
+  "deviation_class": "Medium (LOA20)",
+  "within_5mm_pct": 55.9,
+  "within_15mm_pct": 95.1,
+  "within_50mm_pct": 99.3
+}

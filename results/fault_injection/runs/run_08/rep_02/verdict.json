@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "corrupted_log",
+  "evidence": "pipeline.log lines 32-33 show '[ERROR] Failed to load file data/input_cloud.e57' and 'An error occurred during this process! Result may be incomplete!' occurring mid-registration (right after the ICP point-to-plane refinement step starts at 18:04:14), yet the log continues to report a normal-looking ICP convergence and M3C2 computation afterward; the deviation metrics themselves (fitness 0.703, within_50mm_pct 97.2%) are poor but plausible, so the anomaly is the embedded processing error in the log rather than the metric values."
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.709 with a coarse inlier RMSE of 39.088 mm, and the resulting M3C2 deviations show a heavy tail (p95abs 398.044 mm, std 153.419 mm) with only 19.3% of points within 5 mm, a collapsed within-tolerance rate despite registration_ok being flagged true, indicating the co-registration did not converge reliably and the deviation metrics for this run are not trustworthy."
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "deviation_std_mm=14.972 is inconsistent with the same run's within_5mm_pct=53.1/within_15mm_pct=95.0 (which imply an underlying sigma of about 7-8mm, matching sigma_planar_mm=7.417 in scan_metrics.json) and even exceeds deviation_p95abs_mm=14.524; given the 100% within_50mm_pct cap, the reported std is nearly the mathematical maximum achievable only if all points sat at the edges of their percentile bins, which is not physically plausible."
+}

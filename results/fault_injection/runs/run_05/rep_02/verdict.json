@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "registration_fitness is reported as 1.006 in both deviation_metrics.json and pipeline.log ('[ICP] Converged: fitness=1.006'), which is physically impossible since ICP fitness is bounded to [0,1]; the rest of the run (RMSE 27.5mm, valid 100%, within_15mm 90.1%) looks like a normal, non-degraded registration, so this single out-of-range value is an isolated implausible metric rather than evidence of degraded registration or a corrupted log."
+}

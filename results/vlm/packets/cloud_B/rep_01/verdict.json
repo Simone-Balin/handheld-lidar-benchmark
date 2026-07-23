@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "artifacts": {
+    "drift": {
+      "severity": 1,
+      "confidence": 0.4
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "excess_noise": {
+      "severity": 2,
+      "confidence": 0.6
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Perimeter edges in plan/elevations are straight (low drift); no clear double walls. Walls in elev_x/elev_y/iso show pervasive fine vertical hairy streaking top-to-bottom and radial streak patterns on the plan/iso floor, reducing surface crispness. Section_120 is clean and thin by contrast. Openings treated as genuine doors/windows, not holes."
+}

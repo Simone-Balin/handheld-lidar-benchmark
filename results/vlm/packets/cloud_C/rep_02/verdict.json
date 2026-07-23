@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.85
+    },
+    "ghosting": {
+      "severity": 1,
+      "confidence": 0.55
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 2,
+      "confidence": 0.6
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.6
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Rectangular geometry with clean right angles, floors flat: no drift. Faint parallel offset along plan perimeter suggests minor ghosting; no clearly separated duplicate walls. Sizeable irregular void inside the plan (likely occlusion shadow) scored as holes. Light overall speckle noise; section walls remain thin, not thick/fuzzy."
+}

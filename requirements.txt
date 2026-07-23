@@ -1,0 +1,6 @@
+numpy>=1.20
+open3d>=0.18   # only for the 'deviation' command (FPFH+RANSAC + ICP co-registration)
+laspy>=2.0     # read LAS point data / GPS-time (render_std, acquisition duration)
+plyfile>=0.7   # read PLY scalar fields (M3C2 distance, render_std input)
+pillow>=9.0    # standardized render rasterization and panel composition
+matplotlib>=3.5  # visual scorecards and paper figures

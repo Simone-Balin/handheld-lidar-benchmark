@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness 0.946 and RMSE 26.744 mm in deviation_metrics.json match the log's 'Converged: fitness=0.946, inlier RMSE=0.026744 m' exactly, within_5/15/50mm percentages increase monotonically (54.7/93.0/97.4), and the spacing_mm=3.21 in scan_metrics.json is consistent with density_median_pts_m2=96799 (1/sqrt(density)=3.21mm); the log runs cleanly from load through save with no errors or truncation."
+}

@@ -1,0 +1,29 @@
+# Point clouds and heavy intermediates: never commit these.
+# The pipeline regenerates them from your own scans.
+*.las
+*.laz
+*.e57
+*.ply
+*.bin
+*.asc
+*.rcp
+*.rcs
+
+# CloudCompare and pipeline logs (machine-specific absolute paths)
+*.log
+*.stdout.txt
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Archives
+*.7z
+*.zip

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-09",
+  "fault_detected": true,
+  "fault_type": "corrupted_log",
+  "evidence": "The final line of the registration/M3C2 block states 'Processed finished in 199.44 s.' at 09:01:23, but the visible timestamps for that block only span from 09:00:21 to 09:01:23 (62 s), a ~137 s discrepancy indicating missing or truncated log entries (e.g. no logged loading of reference_cloud.e57/target_cloud.e57 before the coarse alignment step); the first block's duration (170.29 s, from 08:57:02 to 08:59:52) matches its timestamps exactly, confirming the second block's log is inconsistent/incomplete while the metric files themselves (fitness 0.946, deviations, density/spacing) look internally plausible."
+}
