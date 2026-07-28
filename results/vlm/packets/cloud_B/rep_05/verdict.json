@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 1,
+      "confidence": 0.35
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.4
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Section and plan outlines are single thin lines, no doubled or separated wall copies. Corners deviate slightly from 90 degrees but no banana-shaped bending. Wall surfaces densely covered, only expected window/door voids. Mild point scatter in elevations/iso, no major surface gaps."
+}

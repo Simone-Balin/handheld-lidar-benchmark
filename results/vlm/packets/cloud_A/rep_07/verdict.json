@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "ghosting": {
+      "severity": 1,
+      "confidence": 0.4
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.5
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Plan/elevations show straight edges, no clear drift. Section shows thin single lines, no duplication. Faint possible double line at roof edge in elev_y (localized, low confidence). Some salt-and-pepper scatter in plan (bottom-right) and sparse fringe points below elevation baselines."
+}

@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.5
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Walls straight in plan/elevations, no bending, no double surfaces or separated wall copies. Openings read as doors/windows, not holes. Minor line gaps in section_120 and a small scatter cluster near one plan corner suggest light localized noise/missing data only."
+}

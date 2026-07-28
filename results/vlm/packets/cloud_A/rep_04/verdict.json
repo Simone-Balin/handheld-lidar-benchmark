@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.65
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.65
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.45
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.5
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Walls, roof and floor read straight and single-surfaced in plan, elevations and section; no drift, ghosting or duplication seen. Minor scattered outlier points and small edge/occlusion gaps near roof and section boundary; core geometry looks clean, usable with light cleaning."
+}

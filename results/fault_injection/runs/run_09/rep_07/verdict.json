@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.653 with RMSE 43.7 mm and the M3C2 deviation collapses (p95abs 348.3 mm, std 140.2 mm, only 19.4% within 5 mm) despite the target scan itself having mm-level noise (sigma_planar 3.54 mm), indicating the co-registration against the reference is unreliable rather than a genuine scan-quality issue."
+}

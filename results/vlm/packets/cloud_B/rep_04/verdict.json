@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.65
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.4
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.35
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Straight walls and sharp corners in plan, elevations and section; no doubled lines or separated wall copies seen. Minor scattered points fringing above wall tops in both elevations. Isometric far-wall patch likely a genuine opening, not scored as a hole."
+}

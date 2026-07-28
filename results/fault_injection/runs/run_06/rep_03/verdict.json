@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness=0.946 with inlier RMSE=26.744mm in deviation_metrics.json matches pipeline.log line 22 exactly, M3C2 valid_pct=100.0% matches log line 26, and within-tolerance percentages rise monotonically (54.7% / 93.0% / 97.4%) consistent with deviation_std_mm=14.737; scan_metrics.json density (96799 pts/m2) and spacing (3.21mm) are mutually consistent, and pipeline.log runs cleanly from load to save with no error or truncation."
+}

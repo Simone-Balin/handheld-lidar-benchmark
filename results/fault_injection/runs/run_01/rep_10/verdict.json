@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-24",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.223 with RMSE 165.84 mm and p95 deviation 762.71 mm, while within-tolerance percentages collapse (within_5mm_pct=1.4%, within_15mm_pct=2.9%, within_50mm_pct=8.2%); pipeline.log confirms the same low-fitness convergence ('[ICP] Converged: fitness=0.223, inlier RMSE=0.165840 m'), indicating the co-registration itself is unreliable and the deviation metrics are not meaningful."
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "Scan metrics are internally coherent (spacing_mm 4.54 matches 1/sqrt(density_median_pts_m2 48457.146) almost exactly) and pipeline.log shows a clean, complete run with ICP converged (fitness=0.709, inlier RMSE=0.039088 m) and M3C2 distances computed at 100% valid, matching registration_ok=true; the large deviation_std_mm (153.419) and deviation_p95abs_mm (398.044) alongside a still-high within_50mm_pct (92.7%) reflect a plausible heavy-tailed M3C2 error distribution for a mediocre (\"Insufficient\") scanner-to-reference comparison rather than a collapsed registration, corrupted log, or an isolated implausible value."
+}

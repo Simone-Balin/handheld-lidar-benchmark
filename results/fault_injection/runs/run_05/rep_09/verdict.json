@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "registration_fitness is 1.006 in deviation_metrics.json (and confirmed as 'fitness=1.006' in the ICP convergence line of pipeline.log), but ICP fitness is by definition a bounded ratio in [0,1]; a value above 1.0 is physically impossible and inconsistent with the otherwise plausible RMSE (27.523 mm) and tolerance figures (59.9%/90.1%/100.0%) in the same run."
+}

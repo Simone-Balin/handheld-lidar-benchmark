@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "holes": {
+      "severity": 2,
+      "confidence": 0.65
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Plan and section show a regular quadrilateral with sharp corners and a single clean outline: low drift, no doubled or duplicated walls. A clear mid-room gap in plan/iso plus thin vertical gaps in both elevations point to occlusion holes. Edges mildly fuzzy: minor noise."
+}

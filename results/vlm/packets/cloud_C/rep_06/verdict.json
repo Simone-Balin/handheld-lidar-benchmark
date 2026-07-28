@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 2,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 2,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Straight edges and sharp corners across plan/elevations/section: no drift, no wall duplication, no clear ghosting. A wedge-shaped void on the floor/roof plane recurs in plan and iso, consistent with an occlusion hole. Floor in plan shows grainy salt-and-pepper speckling; elevation walls look smoother."
+}

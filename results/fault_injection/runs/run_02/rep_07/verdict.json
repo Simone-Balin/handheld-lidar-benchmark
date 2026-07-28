@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "corrupted_log",
+  "evidence": "pipeline.log shows '[09:01:11] [ERROR] Failed to load file data/input_cloud.e57' followed by 'An error occurred during this process! Result may be incomplete!' during the M3C2 step, even though scan_metrics.json and deviation_metrics.json (fitness=0.966, m3c2_valid_pct=99.125) still look plausible."
+}

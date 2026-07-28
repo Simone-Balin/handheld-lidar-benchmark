@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP converged normally (fitness=0.748, inlier RMSE=0.036155 m, registration_ok=true) and pipeline.log shows a complete run with no errors or truncation, ending in 'Processed finished in 155.97 s.'; the 'Insufficient' deviation class (p95=386.582 mm, only 17.5% within 5 mm) is consistent with an ordinary lower-accuracy target scan (BLK2GO handheld) versus the reference rather than a registration failure or corrupted output."
+}

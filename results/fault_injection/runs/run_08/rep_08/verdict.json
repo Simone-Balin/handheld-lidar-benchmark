@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "corrupted_log",
+  "evidence": "pipeline.log shows an explicit processing failure during ICP -- '[18:04:14] [ERROR] Failed to load file data/input_cloud.e57' followed by 'An error occurred during this process! Result may be incomplete!' -- yet the log continues 30s later with an apparently clean 'ICP Converged: fitness=0.703' as if nothing happened; the metric files themselves remain internally plausible (density/spacing consistent, deviation stats self-consistent)."
+}

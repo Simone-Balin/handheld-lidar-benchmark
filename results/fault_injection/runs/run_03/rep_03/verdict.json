@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "Registration fitness is 0.981 with ICP inlier RMSE 24.503 mm (matching pipeline.log '[ICP] Converged: fitness=0.981, inlier RMSE=0.024503 m') and within_15mm_pct 95.0%, indicating reliable co-registration rather than degradation; pipeline.log runs complete and error-free from loading through M3C2 save with no truncation, and scan/deviation metrics are mutually consistent (density_median ~113038 pts/m2 matches spacing_mm 2.97, and deviation_p95abs_mm 14.524 aligns with within_15mm_pct 95.0%)."
+}

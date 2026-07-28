@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.202 with inlier RMSE=126.45 mm (pipeline.log line 33), and the resulting deviation stats are meaningless: deviation_p95abs_mm=680.78, deviation_std_mm=346.28, and within-tolerance percentages collapse to 1.6%/3.2%/6.9% at 5/15/50 mm despite scan_metrics.json showing a normal, high-quality scan (spacing 2.59 mm, sigma_planar 3.01 mm)."
+}

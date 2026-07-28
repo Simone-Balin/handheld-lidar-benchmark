@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "registration_fitness = 1.006 in deviation_metrics.json (confirmed by pipeline.log line '[ICP] Converged: fitness=1.006, inlier RMSE=0.027523 m') exceeds the theoretical maximum of 1.0 for a normalized ICP overlap/fitness ratio, which is physically impossible; the rest of the deviation figures (RMSE 27.5mm, within_15mm_pct 90.1%, p95abs 13.888mm) are internally consistent and plausible for a Medium-quality registration."
+}

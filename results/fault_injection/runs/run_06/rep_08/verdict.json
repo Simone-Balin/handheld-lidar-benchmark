@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "deviation_p95abs_mm=14.76 is essentially equal to deviation_std_mm=14.737, yet within_15mm_pct is only 93.0%: if the 95th percentile of |deviation| were truly 14.76 mm, at least 95% of points would have to fall within the looser 15 mm threshold, not 93.0%, so these two figures contradict each other within the same deviation_metrics.json."
+}

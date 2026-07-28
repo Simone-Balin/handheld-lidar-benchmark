@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness 0.946 and RMSE 26.744 mm in deviation_metrics.json match pipeline.log exactly (fitness=0.946, inlier RMSE=0.026744 m), M3C2 valid % is 100.0 in both, and within-tolerance percentages rise monotonically (54.7/93.0/97.4%) with no collapse; the log runs uninterrupted from loading to final save with no error messages."
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "registration_fitness=1.006 exceeds the theoretical maximum of 1.0 for an ICP fitness ratio, and deviation_p95abs_mm=13.888 contradicts within_15mm_pct=90.1% (only 90.1% of points fall within 15 mm, so the true 95th-percentile absolute deviation must exceed 15 mm, not be lower than it)."
+}

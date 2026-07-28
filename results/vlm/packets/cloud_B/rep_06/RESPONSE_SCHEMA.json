@@ -1,0 +1,160 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "VLM point-cloud screening verdict",
+  "type": "object",
+  "required": [
+    "prompt_version",
+    "model",
+    "date",
+    "artifacts",
+    "overall_usability_0_3",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "prompt_version": {
+      "type": "string",
+      "const": "vlm-rubric-1.0"
+    },
+    "model": {
+      "type": "string",
+      "description": "model name/id of the assessor session"
+    },
+    "date": {
+      "type": "string",
+      "description": "evaluation date, ISO format YYYY-MM-DD"
+    },
+    "artifacts": {
+      "type": "object",
+      "required": [
+        "drift",
+        "ghosting",
+        "wall_duplication",
+        "holes",
+        "excess_noise"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "drift": {
+          "type": "object",
+          "required": [
+            "severity",
+            "confidence"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "severity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "description": "0=absent, 1=minor, 2=moderate, 3=severe"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "assessor's confidence in this score"
+            }
+          }
+        },
+        "ghosting": {
+          "type": "object",
+          "required": [
+            "severity",
+            "confidence"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "severity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "description": "0=absent, 1=minor, 2=moderate, 3=severe"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "assessor's confidence in this score"
+            }
+          }
+        },
+        "wall_duplication": {
+          "type": "object",
+          "required": [
+            "severity",
+            "confidence"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "severity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "description": "0=absent, 1=minor, 2=moderate, 3=severe"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "assessor's confidence in this score"
+            }
+          }
+        },
+        "holes": {
+          "type": "object",
+          "required": [
+            "severity",
+            "confidence"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "severity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "description": "0=absent, 1=minor, 2=moderate, 3=severe"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "assessor's confidence in this score"
+            }
+          }
+        },
+        "excess_noise": {
+          "type": "object",
+          "required": [
+            "severity",
+            "confidence"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "severity": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 3,
+              "description": "0=absent, 1=minor, 2=moderate, 3=severe"
+            },
+            "confidence": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "assessor's confidence in this score"
+            }
+          }
+        }
+      }
+    },
+    "overall_usability_0_3": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 3,
+      "description": "0=not usable ... 3=usable as-is (building documentation)"
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "scan_metrics.json reports density_median_pts_m2 = 11,801,679.4 (and density_mean_pts_m2 = 18,462,311.5) alongside spacing_mm = 2.91, but a 2.91 mm spacing implies a density near 1.18e5 pts/m2 (about 100x lower); with n_points = 23,665,883 the reported density also implies a scanned surface of only ~2 m2, contradicting the 6.735 x 9.073 x 2.603 m bounding box of the same scan."
+}

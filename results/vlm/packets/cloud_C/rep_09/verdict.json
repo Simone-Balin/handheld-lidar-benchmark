@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "holes": {
+      "severity": 2,
+      "confidence": 0.65
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Clean rectangular room geometry, right-angle corners preserved in plan/section (no drift). No doubled walls. Sizeable void in plan interior (floor occlusion) drives holes score; vertical gaps in elevations read as genuine window/door openings. Light speckle noise at surface edges; no thick fuzzy bands in section."
+}

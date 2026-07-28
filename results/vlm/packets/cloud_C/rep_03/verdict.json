@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "holes": {
+      "severity": 2,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 2,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Walls straight in plan/section, no bending or doubling. Plan shows salt-and-pepper speckle and an internal void; elevations/iso show disconnected sparse vertical fragments and gaps beyond main surface, suggesting missing-data patches rather than clean openings."
+}

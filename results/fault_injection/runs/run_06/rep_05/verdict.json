@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "Registration fitness (0.946) and inlier RMSE (26.744 mm) in deviation_metrics.json match the ICP log line exactly, M3C2 valid % is 100.0 in both the log and metrics, and within-tolerance percentages rise monotonically (54.7% / 93.0% / 97.4%) consistent with the Medium (LOA20) noise/deviation classes; pipeline.log shows a complete, uninterrupted run (LOADING through SAVING/finished) with no error or truncation messages."
+}

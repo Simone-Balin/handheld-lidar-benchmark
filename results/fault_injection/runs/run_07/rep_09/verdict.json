@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "pipeline.log reports '[ICP] Converged: fitness=0.709, inlier RMSE=0.039088 m', and deviation_metrics.json shows deviation_std_mm=153.419 and deviation_p95abs_mm=398.044, roughly 20-50x larger than this run's own scan noise (sigma_planar_mm=8.157, roughness_median_mm=6.603) and only 19.3% of points within 5mm, so the co-registration did not converge tightly enough for the M3C2 deviations to be physically meaningful."
+}

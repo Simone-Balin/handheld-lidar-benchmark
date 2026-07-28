@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness=0.709 with M3C2 valid=100.0% and RMSE=39.088mm (matching the log's inlier RMSE=0.039088m) indicate a normal, converged co-registration, and the log runs cleanly from load to save with no errors or truncation; the elevated deviation figures (p95abs=398.044mm, within_5mm=19.3%, class 'Insufficient') are internally consistent with each other and with the scan's own noise level (sigma_planar=8.157mm) and read as a mediocre-but-plausible unit rather than a registration failure or fabricated value."
+}

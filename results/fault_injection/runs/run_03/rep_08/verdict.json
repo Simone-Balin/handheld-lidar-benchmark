@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP registration is strong (fitness=0.981, inlier RMSE=24.503 mm) and M3C2 validity is 100%, matching the log lines '[ICP] Converged: fitness=0.981, inlier RMSE=0.024503 m' and 'Distances computed (valid: 100.0%)'; deviation_p95abs_mm=14.524 is consistent with within_15mm_pct=95.0, and density (113038 pts/m2) matches spacing_mm=2.97 (sqrt(1/density)=2.97 mm). The log runs uninterrupted from loading through save with no error or truncation, so none of the three fault patterns are present."
+}

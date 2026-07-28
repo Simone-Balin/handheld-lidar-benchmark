@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "corrupted_log",
+  "evidence": "pipeline.log records an explicit processing failure between coarse alignment and ICP refinement: '[18:04:14] [ERROR] Failed to load file data/input_cloud.e57' followed by 'An error occurred during this process! Result may be incomplete!', even though the ICP/M3C2 steps and metric files appear to complete normally afterward."
+}

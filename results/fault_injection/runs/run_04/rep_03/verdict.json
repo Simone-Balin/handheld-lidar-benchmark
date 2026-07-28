@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness=0.748 and inlier RMSE=36.155mm in pipeline.log (line 32) match deviation_metrics.json exactly, m3c2_valid_pct=98.3% is high, and within-tolerance percentages rise monotonically (17.5% / 50.9% / 90.2% at 5/15/50mm), indicating a working but mediocre-quality registration rather than a collapsed one; the log runs cleanly from load to save with no errors or truncation."
+}

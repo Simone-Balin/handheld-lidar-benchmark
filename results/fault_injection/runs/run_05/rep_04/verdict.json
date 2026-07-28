@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "registration_fitness = 1.006 (matching pipeline.log 'ICP Converged: fitness=1.006'), but ICP fitness is a bounded overlap ratio that cannot exceed 1.0, making this value physically impossible even though the paired RMSE (27.523 mm) and the within-tolerance breakdown (59.9/90.1/100.0%) are internally consistent."
+}

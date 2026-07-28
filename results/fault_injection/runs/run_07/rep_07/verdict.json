@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness=0.709 and RMSE=39.088mm (matching the log's 'Converged: fitness=0.709, inlier RMSE=0.039088 m' exactly) are moderate but not collapsed, M3C2 valid_pct is 100% and within_50mm_pct=92.7%, and the low within_5mm_pct (19.3%) is explained by the unit's own Medium noise class (sigma_planar=8.157mm); spacing_mm (4.54) is fully consistent with density_median_pts_m2 (48457), and the log runs uninterrupted from load to save with no errors."
+}

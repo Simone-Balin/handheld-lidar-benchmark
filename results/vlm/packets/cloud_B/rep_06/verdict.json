@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.5
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Plan/section show a clean single-line perimeter with square-ish corners, no bowing, no doubled or duplicated walls. Elevations show two openings (not counted as holes). Some hairy/streaky point density on walls and floor, but section lines stay thin, not fuzzy."
+}

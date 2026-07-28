@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "scan_metrics.json reports density_median_pts_m2=11,801,679.4 and density_mean_pts_m2=18,462,311.5, but the stated spacing_mm=2.91 implies a density near 1/(0.00291m)^2 ~= 118,000 pts/m^2, and n_points=23,665,883 over the bbox_m footprint/surface area (6.735 x 9.073 x 2.603 m) similarly implies a density on the order of 10^5-10^6 pts/m^2; the reported density values are about two orders of magnitude too high, contradicting the other figures in the same file."
+}

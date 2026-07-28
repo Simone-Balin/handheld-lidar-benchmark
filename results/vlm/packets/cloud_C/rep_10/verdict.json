@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "holes": {
+      "severity": 2,
+      "confidence": 0.6
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Plan and section outlines are single clean straight-edged lines with square corners: no bending, no doubled surfaces, no separated duplicate walls. A sizeable irregular void sits inside the main room footprint, and a narrow secondary appendage is only sparsely, patchily covered with scattered outlier points, indicating localized missing data and mild noise rather than global artifacts."
+}

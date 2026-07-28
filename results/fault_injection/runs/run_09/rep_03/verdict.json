@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.653 with inlier RMSE=43.694 mm, and the deviation stats collapse accordingly (std=140.239 mm, p95abs=348.262 mm, within_5mm_pct=19.4%), with deviation_class already flagged 'Insufficient' despite room-scale bbox of ~6x5x2.5 m; the co-registration is unreliable, making the M3C2 deviation figures not meaningful."
+}

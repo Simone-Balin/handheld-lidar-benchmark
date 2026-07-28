@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.653 with inlier RMSE 43.694 mm (confirmed by pipeline.log: 'Converged: fitness=0.653, inlier RMSE=0.043694 m'), and the resulting M3C2 deviation is extreme (std 140.239 mm, p95abs 348.262 mm) with only 19.4% of points within 5 mm, indicating the co-registration itself is unreliable rather than the target scanner being merely mediocre."
+}

@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "holes": {
+      "severity": 2,
+      "confidence": 0.6
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.65
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Walls straight in plan/elevations/section, no bowing or doubled lines. An irregular gap on the top/floor plane (plan and iso, same location) reads as a hole, not an opening. Both elevations show two narrow near-full-height gaps, possibly occlusion shadows. Minor edge scatter; section lines otherwise thin and crisp."
+}

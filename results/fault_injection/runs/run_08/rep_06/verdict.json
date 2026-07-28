@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "corrupted_log",
+  "evidence": "pipeline.log shows '[18:04:14] [ERROR] Failed to load file data/input_cloud.e57' followed by 'An error occurred during this process! Result may be incomplete!' during the ICP refinement step, even though the same file had already loaded and been processed successfully at 18:02:41; the log then continues as if nothing happened (ICP converges at fitness=0.703, M3C2 computes 100% valid distances), so the log is internally inconsistent while the metric files look superficially normal."
+}

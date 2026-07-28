@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "Registration is solid (fitness=0.981, RMSE=24.503 mm, matching pipeline.log line 'Converged: fitness=0.981, inlier RMSE=0.024503 m', m3c2_valid_pct=100.0) and the within-tolerance ladder (53.1% / 95.0% / 100.0% at 5/15/50 mm) is monotonic and consistent with deviation_p95abs_mm=14.524 sitting just under the 15 mm bin; pipeline.log runs cleanly from load to save with no error or truncation markers. All figures align with the reported Medium (LOA20) class, so no registration_degraded, corrupted_log, or synthetic_outlier is evident."
+}

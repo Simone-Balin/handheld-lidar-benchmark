@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "deviation_p95abs_mm is 14.76 mm, which by definition means at least 95% of points lie within 15 mm, yet within_15mm_pct is reported as only 93.0% (implying 7% exceed 15 mm); these two figures from the same deviation_metrics.json contradict each other even though the ICP fitness/RMSE and M3C2 valid% match pipeline.log exactly."
+}

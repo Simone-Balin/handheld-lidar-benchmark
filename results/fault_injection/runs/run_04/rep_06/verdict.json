@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "spacing_mm=2.91 implies a density of roughly 1/spacing^2 ~ 1.18e5 pts/m^2, but density_median_pts_m2=11801679.4 and density_mean_pts_m2=18462311.5 are about 100x larger, an internal order-of-magnitude contradiction within scan_metrics.json; by contrast the deviation/registration figures (fitness=0.748, ICP converged per pipeline.log) and the clean, complete log are consistent with a merely mediocre but plausible scan."
+}

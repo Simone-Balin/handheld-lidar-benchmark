@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "scan_metrics.json reports density_median_pts_m2=11,801,679.4 and density_mean_pts_m2=18,462,311.5, but these are ~100x inconsistent with the run's own spacing_mm=2.91 (which implies ~118,000 pts/m2 for regular sampling) and with n_points=23,665,883 over the bbox_m=[6.735,9.073,2.603] surface area (~205 m2, implying ~115,700 pts/m2)."
+}

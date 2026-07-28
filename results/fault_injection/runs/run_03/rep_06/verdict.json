@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness=0.981 with RMSE=24.503mm and M3C2 valid=100.0% in deviation_metrics.json match pipeline.log exactly ('Converged: fitness=0.981, inlier RMSE=0.024503 m', 'valid: 100.0%'), and spacing_mm=2.97 matches density_median_pts_m2=113038.215 (1/sqrt(113038)=2.97mm); within_5/15/50mm percentages (53.1/95.0/100.0) are internally consistent with p95abs=14.524mm, and the log shows no errors or truncation, so this reads as a normal medium-quality run."
+}

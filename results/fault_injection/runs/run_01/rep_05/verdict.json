@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-24",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP registration fitness is only 0.223 with inlier RMSE of 165.84 mm, and the resulting deviation figures are extreme (deviation_p95abs_mm=762.71, deviation_std_mm=154.566) with collapsed within-tolerance rates (within_5mm_pct=1.4, within_15mm_pct=2.9, within_50mm_pct=8.2), matching the pipeline's own deviation_class of 'Insufficient'."
+}

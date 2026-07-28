@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.5
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.5
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Walls are straight and single (no doubling) in plan, elevations and section. Minor salt-and-pepper stipple on roof/facade surfaces (plan, iso). A few thin full-height gaps beyond the door opening read as possible occlusion shadows, not clearly windows. No drift or wall duplication observed."
+}

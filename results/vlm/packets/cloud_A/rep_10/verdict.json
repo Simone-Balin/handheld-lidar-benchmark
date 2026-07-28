@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.6
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Straight, single-line walls in plan/elevations/section; no bowing, doubling or gross duplication seen. Minor salt-and-pepper stray points in plan/iso and a few dashed/broken segments in the section suggest small localized gaps, not affecting overall usability."
+}

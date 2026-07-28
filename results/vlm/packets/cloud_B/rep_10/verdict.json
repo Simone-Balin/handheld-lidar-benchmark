@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.6
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Perimeter and elevations are straight, no bending or bowing; corners read as orthogonal. No doubled or duplicated wall lines in plan/section. Window and door openings are crisp. Minor scattered outlier points near bottom-left and a small stray tuft near top-left; one ambiguous notch on the right side could be a small hole or a genuine bay."
+}

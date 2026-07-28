@@ -5,11 +5,11 @@ VLM side: median severity per artifact and median overall usability across the f
 
 | VLM variable | sigma_mm | spacing_mm | p95_mm |
 |---|---|---|---|
-| drift | -0.87 (n=3) | +0.00 (n=3) | -1.00 (n=2) |
-| ghosting | +0.87 (n=3) | +0.00 (n=3) | +1.00 (n=2) |
+| drift | n/a | n/a | n/a |
+| ghosting | n/a | n/a | n/a |
 | wall_duplication | n/a | n/a | n/a |
 | holes | +0.50 (n=3) | -0.50 (n=3) | +1.00 (n=2) |
-| excess_noise | -0.87 (n=3) | +0.00 (n=3) | -1.00 (n=2) |
+| excess_noise | n/a | n/a | n/a |
 | overall_usability | -0.87 (n=3) | +0.00 (n=3) | -1.00 (n=2) |
 
 ## Method

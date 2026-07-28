@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 1,
+      "confidence": 0.4
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "excess_noise": {
+      "severity": 0,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Quadrilateral outline (plan/section) shows corners slightly off 90deg with minor edge waviness, suggesting mild drift. Walls read as single thin lines in section, no ghosting/duplication. Elevations show clean facades with genuine door/window openings, no data holes. Vertical striping present but wall surfaces remain thin, not fuzzy."
+}

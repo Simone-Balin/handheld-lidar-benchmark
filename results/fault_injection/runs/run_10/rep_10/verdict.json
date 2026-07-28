@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.202 with inlier RMSE 126.45 mm (log: 'Converged: fitness=0.202, inlier RMSE=0.126450 m'), and the resulting M3C2 deviation collapses (p95=680.78 mm, std=346.28 mm, within_50mm_pct=6.9%), so the co-registration is unreliable and the deviation metrics are not meaningful."
+}

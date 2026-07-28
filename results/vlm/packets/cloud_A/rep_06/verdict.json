@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.45
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.5
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Roof and facades read flat with smooth height gradient, no bending or sloped floor. Section shows single thin outline, near-right-angle corners, no doubled lines. Minor speckle/outlier dots on wall surfaces and a few small local gaps along the section outline; openings look genuine, not holes."
+}

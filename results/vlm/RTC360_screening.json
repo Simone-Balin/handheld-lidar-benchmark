@@ -5,29 +5,30 @@
   "prompt_versions_seen": [
     "vlm-rubric-1.0"
   ],
-  "n_packets": 2,
-  "n_verdicts": 2,
+  "n_packets": 10,
+  "n_verdicts": 10,
   "pending_packets": [],
   "models": [
     "claude-sonnet-5"
   ],
   "dates": [
-    "2026-07-09"
+    "2026-07-09",
+    "2026-07-27"
   ],
   "consistency_definition": "% of repetitions with |severity - median| <= 1",
   "artifacts": {
     "drift": {
-      "median": 0.5,
+      "median": 0.0,
       "iqr": [
-        0.25,
-        0.75
+        0.0,
+        0.0
       ],
-      "iqr_width": 0.5,
+      "iqr_width": 0.0,
       "min": 0.0,
       "max": 1.0,
       "consistency_pct": 100.0,
-      "n": 2,
-      "confidence_median": 0.55
+      "n": 10,
+      "confidence_median": 0.62
     },
     "ghosting": {
       "median": 0.0,
@@ -37,10 +38,10 @@
       ],
       "iqr_width": 0.0,
       "min": 0.0,
-      "max": 0.0,
+      "max": 1.0,
       "consistency_pct": 100.0,
-      "n": 2,
-      "confidence_median": 0.68
+      "n": 10,
+      "confidence_median": 0.62
     },
     "wall_duplication": {
       "median": 0.0,
@@ -52,46 +53,46 @@
       "min": 0.0,
       "max": 0.0,
       "consistency_pct": 100.0,
-      "n": 2,
-      "confidence_median": 0.77
+      "n": 10,
+      "confidence_median": 0.75
     },
     "holes": {
-      "median": 0.5,
+      "median": 1.0,
       "iqr": [
         0.25,
-        0.75
+        1.0
       ],
-      "iqr_width": 0.5,
+      "iqr_width": 0.75,
       "min": 0.0,
       "max": 1.0,
       "consistency_pct": 100.0,
-      "n": 2,
-      "confidence_median": 0.53
+      "n": 10,
+      "confidence_median": 0.5
     },
     "excess_noise": {
-      "median": 1.5,
+      "median": 1.0,
       "iqr": [
-        1.25,
-        1.75
+        1.0,
+        1.0
       ],
-      "iqr_width": 0.5,
+      "iqr_width": 0.0,
       "min": 1.0,
       "max": 2.0,
       "consistency_pct": 100.0,
-      "n": 2,
-      "confidence_median": 0.57
+      "n": 10,
+      "confidence_median": 0.55
     }
   },
   "overall_usability": {
-    "median": 2.5,
+    "median": 3.0,
     "iqr": [
-      2.25,
-      2.75
+      3.0,
+      3.0
     ],
-    "iqr_width": 0.5,
+    "iqr_width": 0.0,
     "min": 2.0,
     "max": 3.0,
     "consistency_pct": 100.0,
-    "n": 2
+    "n": 10
   }
 }

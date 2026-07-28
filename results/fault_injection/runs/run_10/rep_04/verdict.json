@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "registration_fitness is only 0.202 with inlier RMSE of 126.45 mm (confirmed by pipeline.log: 'Converged: fitness=0.202, inlier RMSE=0.126450 m'), and the resulting M3C2 deviations collapse (p95abs 680.78 mm, within_50mm_pct only 6.9%, within_5mm_pct 1.6%), indicating the co-registration failed and the deviation metrics are not meaningful."
+}

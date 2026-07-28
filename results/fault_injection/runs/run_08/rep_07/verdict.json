@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "deviation_p95abs_mm is 367.881 mm while within_50mm_pct is 97.2%, which is mathematically impossible since if 97.2% of points have absolute deviation <=50 mm, the 95th percentile cannot exceed ~50 mm; the reported p95 is over 7x too large given the same run's own within-tolerance figures."
+}

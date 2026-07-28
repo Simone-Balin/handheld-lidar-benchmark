@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "pipeline.log shows a clean, complete run (ICP Converged: fitness=0.709, inlier RMSE=0.039088 m) that matches deviation_metrics.json exactly (registration_rmse_mm=39.088, m3c2_valid_pct=100.0), and scan_metrics.json is internally consistent (spacing_mm=4.54 implies ~48544 pts/m2, matching density_median_pts_m2=48457.146). The 'Insufficient' deviation_class reflects a genuinely mediocre but plausible scanner-pair alignment (within_50mm_pct=92.7%), not a registration failure, log corruption, or an implausible outlier value."
+}

@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "deviation_p95abs_mm is 14.76mm, yet within_15mm_pct is only 93.0%: since 15mm exceeds the stated 95th-percentile threshold, at least ~95% of points should fall within 15mm, not 93.0%. The p95abs value (14.76mm) is also implausibly close to deviation_std_mm (14.737mm) rather than the notably larger value expected for a near-zero-mean deviation distribution (mean 1.623mm)."
+}

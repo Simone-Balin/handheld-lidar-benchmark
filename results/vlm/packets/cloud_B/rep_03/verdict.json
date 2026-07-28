@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 1,
+      "confidence": 0.4
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Regular quadrilateral room, thin clean walls in elevations/section, no banana bending or separated duplicate walls. Rectangular openings read as door/window, not holes. Minor scan-pattern streaking on floor/ceiling and a small hook-like double edge at one plan corner."
+}

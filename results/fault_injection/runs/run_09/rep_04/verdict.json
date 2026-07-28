@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP converged at only fitness=0.653 with inlier RMSE=43.694 mm (pipeline.log), yielding deviation_std_mm=140.239 and deviation_p95abs_mm=348.262 with only within_5mm_pct=19.4; these figures are an order of magnitude larger than the scan's own sigma_planar_mm=3.54 in scan_metrics.json, indicating the co-registration itself is unreliable rather than reflecting genuine sensor disagreement."
+}

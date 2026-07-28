@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness=0.981 and RMSE=24.503mm in deviation_metrics.json match pipeline.log line '[ICP] Converged: fitness=0.981, inlier RMSE=0.024503 m', and within_15mm_pct=95.0% is consistent with deviation_p95abs_mm=14.524mm; the log runs cleanly from load to save with no errors or truncation, so all files are internally consistent and plausible."
+}

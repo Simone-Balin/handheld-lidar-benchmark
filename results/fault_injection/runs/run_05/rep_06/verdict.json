@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "registration_fitness = 1.006 in deviation_metrics.json (confirmed by pipeline.log line '[ICP] Converged: fitness=1.006'), which exceeds the theoretical maximum of 1.0 for an ICP overlap/fitness ratio, an impossible value even though the rest of the run's metrics (RMSE, M3C2 deviations, tolerance percentages) look internally plausible."
+}

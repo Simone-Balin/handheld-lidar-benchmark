@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.55
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Walls and corners read straight in plan, elevations and section; no bending, no doubled or duplicated surfaces. Section at 1.20 m is a single crisp outline, gaps align with window/door positions seen in elevations. Minor scattered speckle noise on roof/wall surfaces in plan and iso views."
+}

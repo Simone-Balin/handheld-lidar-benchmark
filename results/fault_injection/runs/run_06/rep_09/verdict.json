@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "In deviation_metrics.json, deviation_p95abs_mm is 14.76 (below the 15mm mark) while within_15mm_pct is only 93.0%; since a 95th-percentile absolute deviation of 14.76mm mathematically implies at least 95% of points fall within 15mm, these two values contradict each other within the same run."
+}

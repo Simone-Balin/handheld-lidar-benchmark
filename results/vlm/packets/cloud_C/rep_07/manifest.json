@@ -1,0 +1,30 @@
+{
+  "packet": "cloud_C/rep_01",
+  "label": "cloud_C",
+  "repetition": 1,
+  "n_repetitions": 2,
+  "prompt_version": "vlm-rubric-1.0",
+  "renders": [
+    {
+      "view": "plan",
+      "file": "../renders/plan.png"
+    },
+    {
+      "view": "elev_x",
+      "file": "../renders/elev_x.png"
+    },
+    {
+      "view": "elev_y",
+      "file": "../renders/elev_y.png"
+    },
+    {
+      "view": "iso",
+      "file": "../renders/iso.png"
+    },
+    {
+      "view": "section_120",
+      "file": "../renders/section_120.png"
+    }
+  ],
+  "verdict_file": "verdict.json"
+}

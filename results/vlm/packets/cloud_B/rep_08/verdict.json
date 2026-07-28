@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.65
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.75
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Plan/section outlines are straight with sharp right-angle corners, no bending. No double edges or separated wall copies in plan or section. Elevations show a fringe/streak texture but section line stays thin. Openings read as genuine windows/doors."
+}

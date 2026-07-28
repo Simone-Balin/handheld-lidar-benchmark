@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 0,
+      "confidence": 0.7
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.6
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.8
+    },
+    "holes": {
+      "severity": 1,
+      "confidence": 0.5
+    },
+    "excess_noise": {
+      "severity": 2,
+      "confidence": 0.55
+    }
+  },
+  "overall_usability_0_3": 2,
+  "notes": "Rectangular footprint, straight walls and sharp corners in plan/section, no bending or double surfaces. Roof and walls show clear salt-and-pepper speckle and concentric ring texture (plan, iso, elev_y). Minor edge dropouts near roof ridge and door base; window/door openings not counted as holes."
+}

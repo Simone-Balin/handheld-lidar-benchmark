@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-24",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP converged with fitness=0.223 and inlier RMSE=165.84 mm (pipeline.log line 32), yielding only 46.3% valid M3C2 points and a p95 deviation of 762.71 mm with within-tolerance rates collapsed to 1.4%/2.9%/8.2% at 5/15/50 mm and deviation_class explicitly 'Insufficient', indicating the co-registration is unreliable and the deviation metrics are not meaningful."
+}

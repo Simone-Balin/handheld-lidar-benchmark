@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "registration_degraded",
+  "evidence": "ICP fitness is only 0.748 with inlier RMSE 36.155 mm, and the resulting M3C2 deviations (std 146.081 mm, p95abs 386.582 mm, only 17.5% within 5 mm and 50.9% within 15 mm) are far larger than the scan's own intrinsic noise floor (sigma_planar_mm 8.33), indicating the co-registration did not converge tightly and the deviation metrics (labeled 'Insufficient') are not reliable."
+}

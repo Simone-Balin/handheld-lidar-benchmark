@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": false,
+  "fault_type": "none",
+  "evidence": "ICP fitness=0.653 and inlier RMSE=43.694mm in deviation_metrics.json match the log line '[ICP] Converged: fitness=0.653, inlier RMSE=0.043694 m' exactly, and spacing_mm=2.44 is consistent with density_median_pts_m2=168530.6 (1/sqrt(density)~2.44mm); the log runs to completion with no errors or truncation. The large deviation figures (p95abs 348mm, within_5mm 19.4%) reflect a genuinely 'Insufficient' quality scanner rather than a broken registration, since fitness and within-tolerance percentages still degrade gradually (19.4% / 52.9% / 79.3%) rather than collapsing to near zero."
+}

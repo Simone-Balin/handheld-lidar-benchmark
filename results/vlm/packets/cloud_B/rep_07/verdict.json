@@ -1,0 +1,29 @@
+{
+  "prompt_version": "vlm-rubric-1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-27",
+  "artifacts": {
+    "drift": {
+      "severity": 1,
+      "confidence": 0.3
+    },
+    "ghosting": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "wall_duplication": {
+      "severity": 0,
+      "confidence": 0.5
+    },
+    "holes": {
+      "severity": 0,
+      "confidence": 0.4
+    },
+    "excess_noise": {
+      "severity": 1,
+      "confidence": 0.3
+    }
+  },
+  "overall_usability_0_3": 3,
+  "notes": "Clean straight walls and orthogonal corners in section/elevations; openings read as windows/door, not holes. No double or duplicated walls seen. Dense hair-like scan-line rendering reduces confidence on subtle drift/noise; one plan corner looks slightly off-square."
+}

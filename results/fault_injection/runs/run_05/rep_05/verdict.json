@@ -1,0 +1,8 @@
+{
+  "prompt_version": "1.0",
+  "model": "claude-sonnet-5",
+  "date": "2026-07-26",
+  "fault_detected": true,
+  "fault_type": "synthetic_outlier",
+  "evidence": "registration_fitness is reported as 1.006 in both deviation_metrics.json and pipeline.log ('[ICP] Converged: fitness=1.006'), but ICP fitness is a bounded ratio in [0,1] so a value above 1.0 is physically impossible; additionally deviation_p95abs_mm=13.888 is inconsistent with within_15mm_pct=90.1 (if only 90.1% of points are within 15mm, the 95th percentile of absolute deviation must exceed 15mm, not fall below it)."
+}
