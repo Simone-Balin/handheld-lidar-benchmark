@@ -1,5 +1,40 @@
 # Changelog
 
+## v2.1 (2026-07-28)
+
+Data release accompanying the revised LC3D 2026 manuscript. The tool itself is
+unchanged: this release publishes the completed AI-reliability campaign and
+corrects one bookkeeping field.
+
+### Added
+
+- **Fault injection at full scale**: 100 verdicts (10 runs x 10 independent
+  fresh-context repetitions), replacing the 2-repetition pilot. Per-repetition
+  recall 0.940 at precision 0.618, recall 1.000 by per-run majority, fault-type
+  accuracy 0.830, mean inter-repetition consistency 0.810. False positives on
+  clean runs 0.580, most of them runs built from genuinely drifted smartphone
+  data: telling a faulty pipeline from a faithful record of a poor scan is the
+  hard case.
+- **VLM pre-screening at full scale**: 30 blind verdicts (3 clouds x 10
+  repetitions). Across all 30 the screener never labels drift as drift; the
+  smartphone distortion reads as holes.
+
+### Fixed
+
+- `ground_truth.json` still recorded the 2 planned repetitions of the set built
+  on 2026-07-09, although the campaign was extended to 10 on 2026-07-27. The
+  field now reflects the campaign actually executed; `metrics.csv` and
+  `summary.md` were regenerated, and every derived figure is unchanged.
+
+### Known limitations
+
+- The VLM screening covers the RTC360 reference, the BLK2GO and the iPhone. The
+  FJD Trion P2 is not part of the screened set.
+- The Spearman correlation of VLM overall usability against p95 deviation rests
+  on two clouds only, and is reported as descriptive rather than evidential.
+- Weighted kappa against independent human assessors is not yet available.
+
+
 ## v2.0 (2026-07-22)
 
 Release accompanying the LC3D 2026 submission. Adds a TLS-referenced workflow
