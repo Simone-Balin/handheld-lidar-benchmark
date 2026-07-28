@@ -2,8 +2,8 @@
 
 Protocol: fixed prompt (version 1.0), independent fresh-context repetitions. Majority rule: strict majority of available verdicts; ties count as "no fault".
 
-- Collected: 2026-07-27T11:49:16
-- Evaluation set: 10 runs (5 faulted / 5 clean), 2 repetitions planned
+- Collected: 2026-07-28T10:47:16
+- Evaluation set: 10 runs (5 faulted / 5 clean), 10 repetitions planned
 - Verdicts: 100 collected, 0 missing, 0 invalid
 - Models seen: claude-sonnet-5
 - Prompt versions seen: 1.0
