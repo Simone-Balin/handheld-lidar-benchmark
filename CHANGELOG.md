@@ -1,5 +1,67 @@
 # Changelog
 
+## v2.2 (2026-10-24)
+
+Code and results aligned with the LC3D 2026 manuscript (revision of
+2026-10-10): a handedness check on the co-registration and class thresholds
+anchored on the published standards.
+
+### Added
+
+- **Handedness check** (`handedness_check()` in `benchmark.py`): every
+  `deviation` run tests whether the registered cloud fits better mirrored. A
+  rigid transform has determinant +1 and cannot undo a reflection, yet on a
+  rectangular room ICP still converges and the residual is charged to the
+  instrument instead of the file. The check reflects the registered cloud,
+  reruns ICP from the four cardinal axes and compares the two hypotheses. The
+  outcome is stored as `handedness` in the JSON; when the mirrored hypothesis
+  wins, the class becomes `MIRRORED SOURCE`.
+- **Case-study finding**: the SiteScape v1.8.3 export (e57 and PLY alike, which
+  differ by a pure rotation and therefore share handedness) delivers the room
+  mirrored. With the corrected cloud the M3C2 p95 drops from 365.36 to
+  48.75 mm and the class from Fail to Low. Density, spacing, planar noise and
+  check distance are unchanged, as expected for an isometry.
+- **New results**: `IPHONE17_FIX_deviation.json` (corrected cloud, seeded
+  registration), `IPHONE17_ORIG_SEEDED_deviation.json` (control: the original
+  cloud with its best registration reproduces 365.36 mm, so the difference
+  comes from the reflection and not from the alignment),
+  `IPHONE17_MIRR_deviation.json` (corrected cloud, automatic registration:
+  349.77 mm, the coarse FPFH+RANSAC step misses the right basin) and
+  `IPHONE17_MIRR_SCAN.json` (scan metrics of the corrected cloud).
+
+### Changed
+
+- **Class thresholds from the standards**: spacing and planar noise
+  5/15/30 mm from Historic England 2024 (HEAG317, s. 2.1.2 and 3.2.7: point
+  cloud at 1:50/1:100/1:200, TLS precision at 1:50/1:100), with the Low noise
+  bound taken from the upper limit of handheld mobile systems in Historic
+  England 2018. Deviation p95 unchanged at 5/15/50 mm, the upper limits of
+  USIBD LOA40/30/20. Previously spacing 5/10/25 mm and noise 5/10/30 mm.
+- **Class labels**: "High (LOA30)" and the others were shifted one level
+  against USIBD (5 mm is the LOA40 limit). Classes are now High, Medium, Low
+  and Fail (formerly "Insufficient"), as in the paper. Updated `benchmark.py`,
+  `visual_scorecard.py` and the README (class-bounds table with sources).
+- **Results reclassified** without recomputing the metrics (`results/*.json`,
+  `comparison.*`). Only two rows change: `TRION_P2_geo` (spacing 11.95 mm) and
+  `TRION_P2_room` (spacing 14.01 mm) move from Low to Medium, and the geo run
+  becomes Medium overall. Table 2 of the paper is unchanged.
+
+### Fixed
+
+- **Fault-injection generator**: `_jitter` could push the ICP fitness above 1.
+  Clean run run_05 of the July campaign had fitness 1.006 and was flagged in
+  all 10 repetitions. Fitness is now capped at 1 after the random draw, with
+  the random sequence unchanged. The archived campaign was not regenerated:
+  the paper reports precision 0.62 over all runs and 0.71 without run_05. The
+  class tables in `fault_inject.py` stay as in July, so the archived runs
+  regenerate identically.
+
+### Known limitation
+
+- On the corrected cloud the good result is reached only with a seeded
+  registration (`--init-transform`); automatic global registration fails on
+  both the original and the corrected cloud.
+
 ## v2.1 (2026-07-28)
 
 Data release accompanying the revised LC3D 2026 manuscript. The tool itself is
