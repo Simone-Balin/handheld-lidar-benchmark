@@ -69,16 +69,16 @@ BASELINE = "#c3c2b7"     # axis / strong separators
 GOOD_TEXT = "#006300"    # success text on light surface
 
 STATUS = {
-    "green":  "#0ca30c",  # High   (LOA30)
-    "yellow": "#fab219",  # Medium (LOA20)
-    "red":    "#d03b3b",  # Low    (LOA10) and Insufficient
+    "green":  "#0ca30c",  # High
+    "yellow": "#fab219",  # Medium
+    "red":    "#d03b3b",  # Low and Fail
     "grey":   "#898781",  # metric absent / not rated
 }
 DOT_EDGE = (0.043, 0.043, 0.043, 0.35)  # hairline ring around every dot
 
 # class rank: worst rated metric sets the overall verdict (conservative:
 # fitness-for-purpose is limited by the weakest requirement it must satisfy)
-CLASS_RANKS = {"high": 3, "medium": 2, "low": 1, "insufficient": 0}
+CLASS_RANKS = {"high": 3, "medium": 2, "low": 1, "fail": 0, "insufficient": 0}
 RANK_WORDS = {3: "HIGH", 2: "MEDIUM", 1: "LOW", 0: "INSUFFICIENT"}
 RANK_DOTS = {3: "green", 2: "yellow", 1: "red", 0: "red"}
 
@@ -180,7 +180,7 @@ def _to_float(s):
 
 
 def class_rank(cls):
-    """'High (LOA30)' -> 3 ... None if empty / failed / unrecognised."""
+    """'High' -> 3 ... None if empty / failed / unrecognised."""
     c = str(cls or "").strip().lower()
     for word, rank in CLASS_RANKS.items():
         if c.startswith(word):
@@ -369,8 +369,8 @@ def draw_card(row, out_path, price=None, dpi=MIN_DPI):
         ax.text(0.103, 0.228, "Not enough rated metrics for a verdict",
                 fontsize=12, color=INK_2, va="center")
 
-    ax.text(0.055, 0.030, "Classes follow USIBD LOA bands: "
-            "HIGH = LOA30, MEDIUM = LOA20, LOW = LOA10",
+    ax.text(0.055, 0.030, "Class bounds: USIBD LOA (deviation), "
+            "Historic England 2024 (spacing, noise)",
             fontsize=7.2, color=MUTED)
 
     fig.savefig(out_path, dpi=dpi, facecolor=SURFACE)
@@ -453,8 +453,8 @@ def draw_ruler(rows, out_path, dpi=MIN_DPI):
                 f"{_fmt_mm(val)} mm ({metric}) · {class_word(cls)}{arrow}",
                 fontsize=8.5, color=INK_2, ha=ha)
 
-    fig.text(0.97, 0.02, "green = HIGH (LOA30) · yellow = MEDIUM (LOA20) · "
-             "red = LOW (LOA10) · grey = not rated",
+    fig.text(0.97, 0.02, "green = HIGH · yellow = MEDIUM · "
+             "red = LOW / FAIL · grey = not rated",
              fontsize=8, color=MUTED, ha="right")
 
     fig.savefig(out_path, dpi=dpi, facecolor=SURFACE)

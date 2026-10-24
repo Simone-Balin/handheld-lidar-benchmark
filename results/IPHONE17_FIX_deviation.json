@@ -1,0 +1,16 @@
+{
+  "label": "IPHONE17_FIX",
+  "reference": "../results/_prep/RTC360.las",
+  "target": "../results/_prep/IPHONE17_mirrored.las",
+  "registration_fitness": 0.796,
+  "registration_rmse_mm": 39.09,
+  "m3c2_valid_pct": 99.5,
+  "registration_ok": true,
+  "deviation_mean_mm": -2.263,
+  "deviation_std_mm": 84.349,
+  "deviation_p95abs_mm": 48.75,
+  "deviation_class": "Low",
+  "within_5mm_pct": 20.7,
+  "within_15mm_pct": 62.1,
+  "within_50mm_pct": 95.2
+}

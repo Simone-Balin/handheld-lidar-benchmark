@@ -9,7 +9,7 @@
   "deviation_mean_mm": 0.095,
   "deviation_std_mm": 19.192,
   "deviation_p95abs_mm": 10.68,
-  "deviation_class": "Medium (LOA20)",
+  "deviation_class": "Medium",
   "within_5mm_pct": 79.8,
   "within_15mm_pct": 96.8,
   "within_50mm_pct": 99.3

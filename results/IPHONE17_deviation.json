@@ -9,7 +9,7 @@
   "deviation_mean_mm": -15.094,
   "deviation_std_mm": 164.987,
   "deviation_p95abs_mm": 365.36,
-  "deviation_class": "Insufficient",
+  "deviation_class": "Fail",
   "within_5mm_pct": 19.1,
   "within_15mm_pct": 52.9,
   "within_50mm_pct": 87.6

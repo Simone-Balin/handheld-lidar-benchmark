@@ -12,8 +12,9 @@ Metrics (computed identically for every scanner -> fair comparison):
                                 (dominant plane isolated with RANSAC -> operator
                                 independent, robust to imperfect segmentation)
 
-Fitness-for-purpose classes are anchored on USIBD Level of Accuracy (LOA) and
-on drawing-scale graphical tolerance (0.2 mm x scale). See README.md.
+Fitness-for-purpose class bounds come from published specifications: USIBD
+Level of Accuracy for the p95 deviation, Historic England (2024) for point
+spacing and planar noise (1:50, 1:100, 1:200). See README.md.
 
 Output: per-scanner JSON, plus an aggregated comparison table in CSV and Markdown.
 
@@ -65,27 +66,32 @@ DEFAULTS = {
     "m3c2_outlier_sigma": 3.0,   # exclude |residual - mean| > k*sigma from the stats
 }
 
-# Fitness-for-purpose thresholds (mm). See README for the USIBD-LOA mapping.
-SPACING_CLASSES = [(5, "High (LOA30)"), (10, "Medium (LOA20)"), (25, "Low (LOA10)")]
-SIGMA_CLASSES = [(5, "High (LOA30)"), (10, "Medium (LOA20)"), (30, "Low (LOA10)")]
-# geometric deviation vs the reference cloud, classified on the 95th-percentile |distance|
-DEVIATION_CLASSES = [(5, "High (LOA30)"), (15, "Medium (LOA20)"), (50, "Low (LOA10)")]
+# Fitness-for-purpose thresholds (mm). Sources in README ("Class bounds").
+# point spacing: Historic England 2024, point-cloud requirement at 1:50 / 1:100 / 1:200 (s. 2.1.2)
+SPACING_CLASSES = [(5, "High"), (15, "Medium"), (30, "Low")]
+# planar noise (RMS, one sigma): Historic England 2024 TLS precision at 1:50 / 1:100 (s. 3.2.7);
+# Low = upper end of handheld/backpack mobile systems, Historic England 2018
+SIGMA_CLASSES = [(5, "High"), (15, "Medium"), (30, "Low")]
+# geometric deviation vs the reference cloud, classified on the 95th-percentile |distance|:
+# upper limits of USIBD LOA40 / LOA30 / LOA20 (95% confidence); beyond = LOA10
+DEVIATION_CLASSES = [(5, "High"), (15, "Medium"), (50, "Low")]
 
 
 def classify(value_mm, table):
     for thr, name in table:
         if value_mm <= thr:
             return name
-    return "Insufficient"
+    return "Fail"
 
 
 # Class names ranked worst-first, to derive the overall class of a device.
-CLASS_RANK = ["Insufficient", "Low (LOA10)", "Medium (LOA20)", "High (LOA30)"]
+CLASS_RANK = ["Fail", "Low", "Medium", "High"]
 
 
 def overall_class(*classes):
     """Overall fitness class of a device = the minimum (worst) among the classes
-    available for it. Non-class markers ('' or 'REGISTRATION FAILED') are ignored."""
+    available for it. Non-class markers ('', 'REGISTRATION FAILED',
+    'MIRRORED SOURCE') are ignored."""
     ranked = [c for c in classes if c in CLASS_RANK]
     return min(ranked, key=CLASS_RANK.index) if ranked else ""
 
@@ -487,6 +493,59 @@ def register_clouds(cc_exe, reference, target, results_dir, voxel=0.04, init=Non
     return np.asarray(T), float(fine.fitness), float(fine.inlier_rmse)
 
 
+def _icp_multiscale(src, ref, voxel, T0):
+    """Point-to-plane ICP, coarse to fine. `ref` must already carry normals."""
+    import open3d as o3d
+    reg = o3d.pipelines.registration
+    T, fine = np.asarray(T0, dtype=float), None
+    for maxd in (voxel * 12, voxel * 4, voxel * 2):
+        fine = reg.registration_icp(
+            src, ref, maxd, T, reg.TransformationEstimationPointToPlane(),
+            reg.ICPConvergenceCriteria(max_iteration=50))
+        T = fine.transformation
+    return np.asarray(T), float(fine.fitness), float(fine.inlier_rmse)
+
+
+def handedness_check(ref_ply, tgt_ply, T, voxel):
+    """Does the target fit the reference BETTER as a mirror image?
+
+    A rigid registration cannot tell a left-handed export from a right-handed
+    one: a rectangular room is nearly symmetric under reflection, so ICP happily
+    converges on a mirrored cloud and the deviation is then charged to the
+    scanner instead of to the file. The test is cheap and decisive: reflect the
+    registered target, re-run ICP from each of the four cardinal yaws (a
+    reflection cannot be undone by any rotation, so the two hypotheses cannot
+    both fit), and compare. Returns a dict of both fits.
+    """
+    import open3d as o3d
+    ref = o3d.io.read_point_cloud(str(ref_ply))
+    tgt = o3d.io.read_point_cloud(str(tgt_ply))
+    ref.estimate_normals(
+        o3d.geometry.KDTreeSearchParamHybrid(radius=voxel * 5, max_nn=100))
+    aligned = o3d.geometry.PointCloud(tgt)
+    aligned.transform(np.asarray(T, dtype=float))
+    _, f_direct, r_direct = _icp_multiscale(aligned, ref, voxel, np.eye(4))
+
+    c = aligned.get_center()
+    M = np.eye(4); M[0, 0] = -1.0; M[0, 3] = 2.0 * c[0]
+    f_mirror, r_mirror = 0.0, float("inf")
+    for ang in (0.0, 90.0, 180.0, 270.0):
+        a = np.radians(ang); co, si = np.cos(a), np.sin(a)
+        R = np.eye(4); R[:3, :3] = [[co, -si, 0], [si, co, 0], [0, 0, 1.0]]
+        R[:3, 3] = c - R[:3, :3] @ c
+        p = o3d.geometry.PointCloud(aligned); p.transform(R @ M)
+        _, f, r = _icp_multiscale(p, ref, voxel, np.eye(4))
+        if f > f_mirror:
+            f_mirror, r_mirror = f, r
+    # a genuine mirror shows up as a clearly better fit, not as noise
+    mirrored = (f_mirror > f_direct + 0.02) and (r_mirror < r_direct)
+    return {"direct_fitness": round(f_direct, 3),
+            "direct_rmse_mm": round(r_direct * 1000, 2),
+            "mirrored_fitness": round(f_mirror, 3),
+            "mirrored_rmse_mm": round(r_mirror * 1000, 2),
+            "source_is_mirrored": bool(mirrored)}
+
+
 def _write_matrix(T, path):
     Path(path).write_text("\n".join(" ".join(f"{v:.8f}" for v in row) for row in T) + "\n")
 
@@ -496,6 +555,14 @@ def analyze_deviation(cc_exe, reference, target, label, params, results_dir, vox
     `init` is an optional 4x4 matrix (operator point-pair pre-alignment) used to
     seed ICP instead of automatic FPFH+RANSAC global registration."""
     T, fitness, rmse = register_clouds(cc_exe, reference, target, results_dir, voxel, init)
+    hand = handedness_check(results_dir / "_reg_ref.ply", results_dir / "_reg_tgt.ply",
+                            T, voxel)
+    if hand["source_is_mirrored"]:
+        print(f"WARNING [{label}]: the target fits the reference BETTER when mirrored "
+              f"(ICP fitness {hand['mirrored_fitness']:.3f} against "
+              f"{hand['direct_fitness']:.3f}). The export is very likely written in a "
+              "left-handed frame; deviation figures would be charged to the scanner "
+              "instead of to the file. Fix the source data and re-run.", file=sys.stderr)
     mat = results_dir / f"{label}_align.txt"
     _write_matrix(T, mat)
     aligned = results_dir / f"{label}_aligned.bin"
@@ -516,9 +583,12 @@ def analyze_deviation(cc_exe, reference, target, label, params, results_dir, vox
         "label": label, "reference": str(reference), "target": str(target),
         "registration_fitness": round(fitness, 3), "registration_rmse_mm": round(rmse * 1000, 2),
         "m3c2_valid_pct": m["valid_pct"], "registration_ok": ok,
+        "handedness": hand,
         "deviation_mean_mm": m["m3c2_mean_mm"], "deviation_std_mm": m["m3c2_std_mm"],
         "deviation_p95abs_mm": round(p95, 2),
-        "deviation_class": classify(p95, DEVIATION_CLASSES) if ok else "REGISTRATION FAILED",
+        "deviation_class": ("MIRRORED SOURCE" if hand["source_is_mirrored"]
+                            else classify(p95, DEVIATION_CLASSES) if ok
+                            else "REGISTRATION FAILED"),
     }
     for t in (5, 15, 50):
         res[f"within_{t}mm_pct"] = m[f"within_{t}mm_pct"]

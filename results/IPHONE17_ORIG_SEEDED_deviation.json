@@ -1,0 +1,16 @@
+{
+  "label": "IPHONE17_ORIG_SEEDED",
+  "reference": "../results/_prep/RTC360.las",
+  "target": "../results/_prep/IPHONE17.las",
+  "registration_fitness": 0.714,
+  "registration_rmse_mm": 39.52,
+  "m3c2_valid_pct": 99.1,
+  "registration_ok": true,
+  "deviation_mean_mm": -15.094,
+  "deviation_std_mm": 164.987,
+  "deviation_p95abs_mm": 365.36,
+  "deviation_class": "Fail",
+  "within_5mm_pct": 19.1,
+  "within_15mm_pct": 52.9,
+  "within_50mm_pct": 87.6
+}

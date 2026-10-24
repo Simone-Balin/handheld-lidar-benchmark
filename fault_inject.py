@@ -95,8 +95,11 @@ VERDICT_FILE = "verdict.json"
 # Every artefact in the evaluation set gets the same mtime -> no temporal clue.
 _UNIFORM_MTIME = datetime(2026, 7, 8, 12, 0, 0).timestamp()
 
-# Fitness-for-purpose tables mirrored from benchmark.py (kept local so this
-# harness is importable/runnable in isolation).
+# Fitness-for-purpose tables as in benchmark.py at the time of the July 2026
+# campaign (kept local so this harness is importable/runnable in isolation, and
+# left unchanged so the archived runs regenerate identically). benchmark.py now
+# uses the October 2026 bounds (spacing and noise 5/15/30 mm, Historic England
+# 2024).
 SPACING_CLASSES = [(5, "High (LOA30)"), (10, "Medium (LOA20)"), (25, "Low (LOA10)")]
 SIGMA_CLASSES = [(5, "High (LOA30)"), (10, "Medium (LOA20)"), (30, "Low (LOA10)")]
 DEVIATION_CLASSES = [(5, "High (LOA30)"), (15, "Medium (LOA20)"), (50, "Low (LOA10)")]
@@ -321,6 +324,12 @@ def _jitter(obj, rng, key=""):
         kl = key.lower()
         if "pct" in kl or kl.startswith("within"):
             v = float(np.clip(v, 0.0, 100.0))
+        # ICP fitness is a fraction: a jittered value above 1 is physically
+        # impossible and turned clean run_05 of the July 2026 campaign into a
+        # de facto fault (fitness 1.006). Clipped after the draw, so the random
+        # sequence, and every other generated value, is unchanged.
+        if "fitness" in kl:
+            v = float(min(v, 1.0))
         if isinstance(obj, int):
             return int(round(v))
         return round(float(v), 3)

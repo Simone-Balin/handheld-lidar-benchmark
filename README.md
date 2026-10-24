@@ -26,20 +26,27 @@ list however many you have in the manifest.
 | **Point density** | spatial resolution | CloudCompare surface density → median pts/m² and equivalent point spacing (mm) |
 | **Surface noise (σ)** | intrinsic sensor noise | RMS of point-to-plane residuals on a flat patch; the dominant plane is isolated with **RANSAC**, so the result is independent of how the patch was segmented |
 
-Both metrics are mapped to a 3-level **fitness-for-purpose** scale anchored on
-two references:
+All metrics, and the p95 geometric deviation against the reference, are mapped
+to a 3-level **fitness-for-purpose** scale whose bounds come from published
+building-documentation specifications (class bounds):
 
-* **USIBD Level of Accuracy (LOA)** — building-documentation standard.
-* **Drawing-scale tolerance** — graphical error `0.2 mm × scale`.
-
-| Class | USIBD LOA | Drawing scale | σ target | Spacing target |
+| Class | Approx. drawing scale | p95 deviation | σ (planar noise) | Spacing |
 |---|---|---|---|---|
-| **High** | LOA30 (~6 mm) | 1:20–1:50 | ≤ 5 mm | ≤ 5 mm |
-| **Medium** | LOA20 (~15 mm) | 1:100 | ≤ 10 mm | ≤ 10 mm |
-| **Low** | LOA10 (~50 mm) | 1:200 | ≤ 30 mm | ≤ 25 mm |
+| **High** | 1:50 | ≤ 5 mm (USIBD LOA40 upper limit) | ≤ 5 mm (HE 2024, s. 3.2.7) | ≤ 5 mm (HE 2024, s. 2.1.2) |
+| **Medium** | 1:100 | ≤ 15 mm (USIBD LOA30) | ≤ 15 mm (HE 2024, s. 3.2.7) | ≤ 15 mm (HE 2024, s. 2.1.2) |
+| **Low** | 1:200 | ≤ 50 mm (USIBD LOA20) | ≤ 30 mm (HE 2018, handheld/backpack upper end) | ≤ 30 mm (HE 2024, s. 2.1.2) |
 
-> ⚠ The exact USIBD LOA tolerance values should be checked against the source
-> document (USIBD C220) before citing them in a publication.
+Beyond the Low bound a value is classed **Fail** (USIBD LOA10 for the deviation).
+USIBD states its ranges at the 95% confidence level, matched here by the p95
+statistic; planar noise is an RMS, comparable with the one-sigma precision of
+Historic England. The overall class of a device is the worst of its classes.
+These are operational classes, not USIBD certifications.
+
+Sources: USIBD, *Level of Accuracy (LOA) Specification* v3.1 (2025);
+Historic England, *Geospatial Survey Specifications for Cultural Heritage*,
+HEAG317 (2024); Historic England, *3D Laser Scanning for Heritage*, HEAG155
+(2018); GSA, *BIM Guide Series 03: 3D Imaging* (2009), tolerances ±6/±13/±51 mm
+for Levels 3/2/1.
 
 ---
 
@@ -221,7 +228,43 @@ Example:
 
 | Scanner | Points | Density (pts/m²) | Spacing (mm) | Density class | Noise σ (mm) | Noise class |
 |---|---|---|---|---|---|---|
-| BLK2GO | 11932734 | 4201.7 | 15.43 | Low (LOA10) | 3.9 | High (LOA30) |
+| BLK2GO | 11932734 | 4201.7 | 15.43 | Low | 3.9 | High |
+
+---
+
+## Handedness check (mirrored exports)
+
+Every `deviation` run also asks a question a rigid registration cannot answer on
+its own: **does the target fit the reference better as a mirror image?**
+
+A rigid transform has determinant +1, so it can rotate and translate a cloud but
+never un-mirror it. A rectangular room is nearly symmetric under reflection, so
+ICP converges happily on a mirrored cloud, the walls line up, and the residual
+mismatch is then charged to the scanner instead of to the file that delivered it.
+The check reflects the registered target, re-runs ICP from each of the four
+cardinal yaws, and compares the two hypotheses; a reflection cannot be undone by
+any rotation, so only one of them can fit well.
+
+The result goes into `results/<label>_deviation.json`:
+
+```json
+"handedness": {
+  "direct_fitness": 0.714, "direct_rmse_mm": 39.5,
+  "mirrored_fitness": 0.796, "mirrored_rmse_mm": 39.1,
+  "source_is_mirrored": true
+}
+```
+
+When the mirrored hypothesis wins, the deviation class is reported as
+`MIRRORED SOURCE`: the numbers describe the export defect, not the instrument.
+Fix the source data (reflect one axis) and run again.
+
+This is not hypothetical. In the case study of this repository the smartphone
+export was written in a left-handed frame, which cost **365.4 mm** of apparent
+p95 deviation against **48.8 mm** once corrected: the difference between a device
+that fails outright and one that lands in the Low class. Neither the dimensional
+check distances (a reflection preserves lengths) nor the visual pre-screening
+could reveal it.
 
 ---
 

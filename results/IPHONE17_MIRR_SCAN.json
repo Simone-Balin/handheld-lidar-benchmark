@@ -1,0 +1,24 @@
+{
+  "label": "IPHONE17_MIRR_SCAN",
+  "cloud": "../results/_prep/IPHONE17_mirrored.las",
+  "n_points": 23983226,
+  "bbox_m": [
+    6.31,
+    9.05,
+    2.57
+  ],
+  "density_radius_m": 0.05,
+  "density_median_pts_m2": 121212.4,
+  "density_mean_pts_m2": 185095.3,
+  "spacing_mm": 2.87,
+  "density_class": "High",
+  "roughness_kernel_m": 0.03,
+  "roughness_median_mm": 6.7,
+  "roughness_p90_mm": 15.7,
+  "sigma_planar_mm": 8.02,
+  "noise_class": "Medium",
+  "noise_method": "auto (dominant wall, local patch)",
+  "measured_on_wall": true,
+  "acq_duration_min": null,
+  "acq_s_per_m2": null
+}
